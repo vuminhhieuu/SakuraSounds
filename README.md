@@ -1,5 +1,3 @@
----
-
 # SakuraSounds 🎵
 
 **SakuraSounds** is a web-based music streaming application built using the **MVC architecture** with **Node.js**, **Express**, and **MongoDB**. The goal of this project is to provide users with an intuitive and seamless music experience where they can listen to their favorite songs, create playlists, and manage their music library.
