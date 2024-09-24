@@ -1,21 +1,31 @@
+Here’s the updated `README.md` file in English, integrating the new features from the `newREADME.md`:
+
+---
+
 # SakuraSounds 🎵
 
-SakuraSounds is a web-based music streaming application built using the **MVC architecture** with **Node.js**, **Express**, and **MongoDB**. The goal of this project is to provide users with an intuitive and seamless music experience where they can listen to their favorite songs, create playlists, and manage their music library.
+**SakuraSounds** is a web-based music streaming application built using the **MVC architecture** with **Node.js**, **Express**, and **MongoDB**. The goal of this project is to provide users with an intuitive and seamless music experience where they can listen to their favorite songs, create playlists, and manage their music library.
 
 ## Features ✨
 
-- **User Authentication**: Sign up, login, and manage user accounts.
+### Core Features:
+- **User Authentication**: Sign up, login, and manage user accounts securely using JWT.
 - **Playlist Management**: Create, edit, and delete personalized playlists.
-- **Song Streaming**: Play songs directly from the platform.
+- **Song Streaming**: Stream music with the integrated player.
 - **Search Functionality**: Search for songs by title, artist, or genre.
-- **Responsive Design**: Designed with a clean and responsive interface using **SCSS** and **EJS view engine**.
+- **Responsive Design**: A clean and responsive interface designed using **Bootstrap** and **SCSS**.
+
+### Advanced Features:
+- **Karaoke Mode**: Users can upload songs to create instant karaoke tracks.
+- **Learn with Sheet Music**: View and learn songs through integrated sheet music.
+- **Remix On Demand**: Automatically generate remixes based on user preferences.
 
 ## Tech Stack 🛠️
 
 - **Backend**: Node.js, Express.js
-- **Frontend**: EJS for templating, SCSS for styling
-- **Database**: MongoDB with Mongoose for ORM
-- **Authentication**: JSON Web Tokens (JWT)
+- **Frontend**: EJS for templating, SCSS for styling, Bootstrap for UI design
+- **Database**: MongoDB with Mongoose ORM
+- **Authentication**: JSON Web Tokens (JWT) for secure user authentication
 - **CSS Preprocessor**: SCSS
 
 ## Project Structure 🗂️
@@ -27,10 +37,11 @@ src/
 ├── models/             # Database schemas (User, Song, Playlist)
 ├── public/             # Static files (CSS, JS, images)
 ├── routes/             # API and view routes
-├── services/           # Business logic and service layers
-├── uploads/            # Folder for uploaded content (if needed)
+├── services/           # Business logic services
+├── resources/          # SCSS resources
+├── uploads/            # Folder for uploaded content
 ├── utils/              # Helper functions and utilities
-├── views/              # EJS templates for rendering HTML pages
+├── views/              # EJS templates for rendering HTML pages  
 └── server.js           # Main server file
 ```
 
@@ -75,7 +86,7 @@ src/
 
 5. **Access the app**: Open your browser and navigate to `http://localhost:3000`.
 
-### File `.env` Example:
+### Example `.env` file:
 ```plaintext
 PORT=3000
 MONGO_URI=mongodb://localhost:27017/sakura_sounds
@@ -84,14 +95,14 @@ JWT_SECRET=supersecretkey
 
 ## Usage 🖥️
 
-1. **Sign up** for an account.
-2. **Log in** with your credentials to access the dashboard.
+1. **Sign up** for a new account.
+2. **Log in** to access your personalized dashboard.
 3. **Search** for your favorite songs and artists.
 4. Create **playlists** and manage your music library.
 
 ## Contributing 🤝
 
-We welcome contributions! Please fork the repository, create a branch, and submit a pull request.
+We welcome contributions! Please fork the repository, create a new branch, and submit a pull request.
 
 ### Steps to Contribute
 
@@ -109,7 +120,6 @@ Here are some useful resources to get familiar with the tech stack:
 - [MongoDB Documentation](https://www.mongodb.com/docs/)
 - [SCSS Documentation](https://sass-lang.com/documentation)
 - [EJS Documentation](https://ejs.co/)
+- [Bootstrap Documentation](https://getbootstrap.com/)
 
 ---
-
-Let me know if you'd like any modifications or additions!
