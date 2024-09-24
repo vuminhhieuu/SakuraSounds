@@ -1,5 +1,3 @@
-Here’s the updated `README.md` file in English, integrating the new features from the `newREADME.md`:
-
 ---
 
 # SakuraSounds 🎵
