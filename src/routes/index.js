@@ -1,9 +1,9 @@
+const express = require('express')
+const router = express.Router()
+
+
 const songController = require('../controllers/songController')
 
-
-function router(app) {
-
-    app.get('/', songController.getHomePage)
-}
+router.use('/', songController.getHomePage)
 
 module.exports = router
