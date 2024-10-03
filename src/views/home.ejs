@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -13,11 +13,10 @@
 
 <body>
   <div class="app">
-    <%- include('partials/header') %>
-
+    <%- include('partials/header') %> -->
 
       <!-- Main content (Popular Songs Section) -->
-      <div class="container">
+      <!-- <div class="container">
         <h2>Popular Songs</h2>
         <ul class="list-group">
           <% if (songs && songs.length > 0) { %>
@@ -33,13 +32,19 @@
           <% } %>
         </ul>
       </div>
-
-
-    <%- include('partials/footer') %>
   </div>
+  <%- include('partials/footer') %>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
 </body>
 
-</html>
+</html> -->
+
+<%- include('layout/main', { body: `
+  <div class="container text-center my-5">
+    <h1>Welcome to SakuraSounds</h1>
+    <p>Your go-to platform for streaming music and creating playlists.</p>
+    <a href="/playlists" class="btn btn-primary">Explore Playlists</a>
+  </div>
+` }) %>

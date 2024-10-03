@@ -15,7 +15,7 @@ database.connect()
 // Inittial routes and configure the server and view engine
 configServer(app)
 configViewEngine(app)
-router(app)
+app.use('/', router)
 
 
 // Start the server
