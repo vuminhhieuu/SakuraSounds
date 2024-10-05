@@ -1,16 +1,15 @@
-const Song = require('../models/song')
+const Song = require('../models/songModel')
 
-const getSongs = async (req, res, next) => {
+const getSongs = async () => {
     try {
         const songs = await Song.find()
         return songs
-    }
-    catch (error) {
+    } catch (error) {
         console.error(error)
         res.status(500).send('Server error')
     }
 }
 
 module.exports = {
-    getSongs
+    getSongs,
 }

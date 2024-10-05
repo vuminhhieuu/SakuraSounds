@@ -5,7 +5,6 @@ const getHomePage = (req, res, next) => {
     res.render('home', { songs })
 }
 
-
 module.exports = {
-    getHomePage
+    getHomePage,
 }

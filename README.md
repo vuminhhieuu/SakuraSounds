@@ -34,6 +34,7 @@ src/
 ├── public/             # Static files (CSS, JS, images)
 ├── routes/             # API and view routes
 ├── services/           # Business logic services
+├── middlewares/        # Middleware functions for request handling
 ├── resources/          # SCSS resources
 ├── uploads/            # Folder for uploaded content
 ├── utils/              # Helper functions and utilities

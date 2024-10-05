@@ -1,23 +1,6 @@
-// src/resources/scss/style.scss
-
-@import '_variable';
-
-// Header styles
-.navbar {
-  background-color: $header-background;
-}
-
-.nav-link {
-  color: $white-color;
-  &:hover {
-    color: $secondary-color;
-  }
-}
-
-// Footer styles
-.footer {
-  background-color: $footer-background;
-  p, a {
-    color: $white-color;
-  }
-}
+@import 'variable';
+@import 'header';
+@import 'footer';
+@import 'home';
+@import 'auth';
+@import 'login';
