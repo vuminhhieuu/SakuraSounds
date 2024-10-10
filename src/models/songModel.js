@@ -15,5 +15,5 @@ const Song = new Schema({
     createdAt: { type: Date, default: Date.now }
 })
 
-mongoose.plugins(slug)
+mongoose.plugin(slug)
 module.exports = mongoose.model('Song', Song)
