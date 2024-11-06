@@ -1,0 +1,212 @@
+.header {
+  background-color: #f7cac9; }
+  .header .navbar .navbar-brand .logo {
+    max-width: 150px; }
+  .header .navbar .nav-link {
+    color: #333; }
+    .header .navbar .nav-link:hover {
+      color: #f06b6b; }
+  .header .navbar .btn-primary {
+    background-color: #f06b6b;
+    border-color: #f06b6b; }
+    .header .navbar .btn-primary:hover {
+      background-color: #e05252; }
+
+.footer {
+  background-color: #f7cac9;
+  color: #333; }
+  .footer h5 {
+    font-weight: bold;
+    margin-bottom: 15px; }
+  .footer a {
+    color: #333; }
+    .footer a:hover {
+      color: #f06b6b; }
+  .footer .btn-primary {
+    background-color: #f06b6b;
+    border-color: #f06b6b; }
+    .footer .btn-primary:hover {
+      background-color: #e05252; }
+
+.hero-banner {
+  background: url("/path/to/hero-banner.jpg") no-repeat center center;
+  background-size: cover;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center; }
+  .hero-banner .btn-primary {
+    background-color: #f06b6b;
+    border-color: #f06b6b; }
+    .hero-banner .btn-primary:hover {
+      background-color: #e05252; }
+
+.featured-playlists {
+  margin: 50px 0; }
+  .featured-playlists h2 {
+    font-weight: bold;
+    color: #333; }
+  .featured-playlists .playlist-card {
+    text-align: center; }
+    .featured-playlists .playlist-card img {
+      border-radius: 10px; }
+    .featured-playlists .playlist-card h3 {
+      color: #f06b6b; }
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f7cac9; }
+
+.auth-box {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
+  .auth-box h2 {
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 1.5rem; }
+  .auth-box .form-group {
+    margin-bottom: 1.25rem; }
+    .auth-box .form-group input {
+      height: 45px;
+      border-radius: 8px;
+      border: 1px solid #e0e0e0;
+      padding: 0 15px;
+      font-size: 1rem;
+      background-color: #f9f9f9; }
+      .auth-box .form-group input:focus {
+        outline: none;
+        border-color: #f06b6b;
+        box-shadow: 0 0 5px rgba(240, 107, 107, 0.2); }
+  .auth-box .btn-register, .auth-box .btn-login {
+    background-color: #f06b6b;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    height: 45px;
+    transition: background-color 0.3s; }
+    .auth-box .btn-register:hover, .auth-box .btn-login:hover {
+      background-color: #e05252; }
+  .auth-box p {
+    margin-top: 1.5rem;
+    font-size: 0.9rem; }
+    .auth-box p a {
+      color: #f06b6b;
+      font-weight: bold;
+      text-decoration: none; }
+      .auth-box p a:hover {
+        color: #e05252; }
+
+.btn-register, .btn-login {
+  position: relative;
+  overflow: hidden; }
+  .btn-register:before, .btn-login:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: width 0.4s ease, height 0.4s ease; }
+  .btn-register:hover:before, .btn-login:hover:before {
+    width: 0;
+    height: 0; }
+
+.login-container {
+  height: 100vh;
+  display: flex;
+  background-color: #fce4ec; }
+  .login-container .left-section {
+    background-color: #f8bbd0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    color: #fff; }
+    .login-container .left-section .music-info {
+      text-align: center; }
+      .login-container .left-section .music-info .logo-text {
+        font-size: 3rem;
+        font-weight: bold;
+        font-family: 'Arial Black', sans-serif;
+        margin-bottom: 2rem;
+        letter-spacing: 3px; }
+      .login-container .left-section .music-info .music-image {
+        margin-bottom: 1.5rem; }
+        .login-container .left-section .music-info .music-image img {
+          border-radius: 12px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); }
+      .login-container .left-section .music-info .music-caption {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 2rem; }
+      .login-container .left-section .music-info .music-player-controls {
+        display: flex;
+        justify-content: center; }
+        .login-container .left-section .music-info .music-player-controls button {
+          background: none;
+          border: none;
+          color: #fff;
+          font-size: 2rem;
+          margin: 0 0.5rem;
+          cursor: pointer;
+          transition: color 0.2s; }
+          .login-container .left-section .music-info .music-player-controls button:hover {
+            color: #f06292; }
+  .login-container .right-section {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 2rem; }
+    .login-container .right-section .form-container {
+      width: 100%;
+      max-width: 400px; }
+      .login-container .right-section .form-container h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        color: #333; }
+      .login-container .right-section .form-container p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem; }
+      .login-container .right-section .form-container .form-group {
+        position: relative; }
+        .login-container .right-section .form-container .form-group input {
+          border-radius: 8px;
+          border: 1px solid #ddd;
+          padding: 0.75rem 1rem;
+          width: 100%; }
+          .login-container .right-section .form-container .form-group input:focus {
+            border-color: #f06292;
+            box-shadow: 0 0 4px rgba(240, 98, 146, 0.5); }
+        .login-container .right-section .form-container .form-group .password-toggle {
+          position: absolute;
+          top: 50%;
+          right: 10px;
+          transform: translateY(-50%);
+          cursor: pointer;
+          font-size: 1.2rem;
+          color: #888; }
+      .login-container .right-section .form-container .btn-login {
+        background-color: #004d40;
+        color: #fff;
+        padding: 0.75rem;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: bold;
+        transition: background-color 0.2s; }
+        .login-container .right-section .form-container .btn-login:hover {
+          background-color: #00332d; }

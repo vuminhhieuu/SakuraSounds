@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="/css/app.css"> <!-- Link to compiled SCSS -->
+  <title>Login - SakuraSounds</title>
+</head>
+<body>
+  <div class="container-fluid login-container">
+    <div class="row no-gutters">
+      <!-- Left Side -->
+      <div class="col-md-6 left-section d-flex align-items-center justify-content-center">
+        <div class="music-info text-center">
+          <h1 class="logo-text">SAKURA</h1>
+          <div class="music-image">
+            <img src="/path/to/music-image.jpg" alt="Music Image" class="img-fluid">
+          </div>
+          <p class="music-caption">Lyrics In Music</p>
+          <div class="music-player-controls">
+            <button class="player-btn prev">&#9664;</button>
+            <button class="player-btn play">&#9658;</button>
+            <button class="player-btn next">&#9654;</button>
+          </div>
+        </div>
+      </div>
+      <!-- Right Side (Login Form) -->
+      <div class="col-md-6 right-section d-flex align-items-center">
+        <div class="form-container mx-auto">
+          <h2 class="mb-3">Login</h2>
+          <p class="mb-4">Login Your Account</p>
+          <form action="user/login" method="POST">
+            <div class="form-group mb-3">
+              <input type="text" class="form-control" id="name" name="name" placeholder="NAME" required>
+            </div>
+            <div class="form-group mb-3">
+              <input type="password" class="form-control" id="password" name="password" placeholder="PASSWORD" required>
+              <span class="password-toggle" onclick="togglePasswordVisibility()">👁️</span>
+            </div>
+            <button type="submit" class="btn btn-login w-100">Log In</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function togglePasswordVisibility() {
+      var passwordInput = document.getElementById("password");
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+      } else {
+        passwordInput.type = "password";
+      }
+    }
+  </script>
+</body>
+</html>

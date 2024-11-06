@@ -1,0 +1,36 @@
+.hero-banner {
+    background: url('/path/to/hero-banner.jpg') no-repeat center center;
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+  
+    .btn-primary {
+      background-color: #f06b6b;
+      border-color: #f06b6b;
+      &:hover {
+        background-color: #e05252;
+      }
+    }
+  }
+  
+  .featured-playlists {
+    margin: 50px 0;
+    h2 {
+      font-weight: bold;
+      color: #333;
+    }
+    .playlist-card {
+      text-align: center;
+      img {
+        border-radius: 10px;
+      }
+      h3 {
+        color: #f06b6b;
+      }
+    }
+  }
+  

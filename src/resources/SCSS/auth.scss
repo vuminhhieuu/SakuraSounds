@@ -1,0 +1,92 @@
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f7cac9; // Màu nền chủ đạo
+  }
+  
+  .auth-box {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  
+    h2 {
+      color: #333;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+  
+    .form-group {
+      margin-bottom: 1.25rem;
+  
+      input {
+        height: 45px;
+        border-radius: 8px;
+        border: 1px solid #e0e0e0;
+        padding: 0 15px;
+        font-size: 1rem;
+        background-color: #f9f9f9;
+  
+        &:focus {
+          outline: none;
+          border-color: #f06b6b;
+          box-shadow: 0 0 5px rgba(240, 107, 107, 0.2);
+        }
+      }
+    }
+  
+    .btn-register, .btn-login {
+      background-color: #f06b6b;
+      color: white;
+      border-radius: 8px;
+      border: none;
+      font-size: 1rem;
+      font-weight: bold;
+      height: 45px;
+      transition: background-color 0.3s;
+  
+      &:hover {
+        background-color: #e05252;
+      }
+    }
+  
+    p {
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+  
+      a {
+        color: #f06b6b;
+        font-weight: bold;
+        text-decoration: none;
+  
+        &:hover {
+          color: #e05252;
+        }
+      }
+    }
+  }
+.btn-register, .btn-login {
+  position: relative;
+  overflow: hidden;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: width 0.4s ease, height 0.4s ease;
+  }
+
+  &:hover:before {
+    width: 0;
+    height: 0;
+  }
+}
+  

@@ -1,0 +1,126 @@
+.login-container {
+    height: 100vh;
+    display: flex;
+    background-color: #fce4ec; // Màu hồng nhạt
+  
+    .left-section {
+      background-color: #f8bbd0; // Màu hồng đậm hơn
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      color: #fff;
+  
+      .music-info {
+        text-align: center;
+  
+        .logo-text {
+          font-size: 3rem;
+          font-weight: bold;
+          font-family: 'Arial Black', sans-serif;
+          margin-bottom: 2rem;
+          letter-spacing: 3px;
+        }
+  
+        .music-image {
+          margin-bottom: 1.5rem;
+  
+          img {
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+          }
+        }
+  
+        .music-caption {
+          font-size: 1.5rem;
+          font-weight: bold;
+          margin-bottom: 2rem;
+        }
+  
+        .music-player-controls {
+          display: flex;
+          justify-content: center;
+  
+          button {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 2rem;
+            margin: 0 0.5rem;
+            cursor: pointer;
+            transition: color 0.2s;
+  
+            &:hover {
+              color: #f06292; // Hiệu ứng hover màu hồng
+            }
+          }
+        }
+      }
+    }
+  
+    .right-section {
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      padding: 2rem;
+  
+      .form-container {
+        width: 100%;
+        max-width: 400px;
+  
+        h2 {
+          font-size: 2rem;
+          font-weight: bold;
+          margin-bottom: 1rem;
+          color: #333;
+        }
+  
+        p {
+          font-size: 1rem;
+          margin-bottom: 1.5rem;
+        }
+  
+        .form-group {
+          position: relative;
+  
+          input {
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            padding: 0.75rem 1rem;
+            width: 100%;
+  
+            &:focus {
+              border-color: #f06292;
+              box-shadow: 0 0 4px rgba(240, 98, 146, 0.5);
+            }
+          }
+  
+          .password-toggle {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: #888;
+          }
+        }
+  
+        .btn-login {
+          background-color: #004d40;
+          color: #fff;
+          padding: 0.75rem;
+          border: none;
+          border-radius: 8px;
+          font-size: 1rem;
+          font-weight: bold;
+          transition: background-color 0.2s;
+  
+          &:hover {
+            background-color: #00332d;
+          }
+        }
+      }
+    }
+  }
+  
