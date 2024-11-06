@@ -1,23 +1,21 @@
-require('dotenv').config()
-const configServer = require('./config/serverConfig')
-const database = require('./config/dbConfig')
-const configViewEngine = require('./config/viewEngineConfig')
-const router = require('./routes/indexRoute')
-
 const express = require('express')
+const databaseConnect = require('./config/database.configs')
+const serverConfig = require('./config/server.configs')
+const routerConfig = require('./routes/index.routes')
+const ErrorHandler = require('./middlewares/errorHandler.middlewares')
+
 const app = express()
 
-// Define PORT for server to listen on
-const PORT = process.env.PORT || 3000
+// Server configuration
+serverConfig(app)
 
-// Connect to MongoDB database and configure the server and view engine
-database.connect()
+// Database connection
+databaseConnect()
 
-// Inittial routes and configure the server and view engine
-configServer(app)
-configViewEngine(app)
-router(app)
+// Router configuration
+routerConfig(app)
 
+// Error handler
+app.use(ErrorHandler)
 
-// Start the server
-app.listen(PORT, () => console.log(`Server is running on http://localhost:${PORT}`))
+module.exports = app
