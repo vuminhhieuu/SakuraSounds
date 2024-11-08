@@ -1,0 +1,76 @@
+.signin-container {
+  .left-section {
+    background: linear-gradient(45deg, $primary-color, lighten($primary-color, 20%));
+    color: $white-color;
+    text-align: center;
+    padding: 2rem;
+
+    .logo-text {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: $white-color;
+    }
+
+    .tagline {
+      font-size: 1.25rem;
+      margin-top: 1rem;
+      color: lighten($white-color, 30%);
+    }
+
+    .logo-image {
+      max-width: 200px;
+      margin-top: 2rem;
+    }
+  }
+
+  .right-section {
+    background-color: $background-color;
+    padding: 2rem;
+
+    .form-container {
+      width: 100%;
+      max-width: 400px;
+
+      h2 {
+        color: $primary-color;
+      }
+
+      .alert {
+        font-size: 0.9rem;
+      }
+
+      .form-group {
+        position: relative;
+
+        .password-toggle {
+          position: absolute;
+          right: 10px;
+          top: 50%;
+          transform: translateY(-50%);
+          cursor: pointer;
+          color: $secondary-color;
+        }
+      }
+
+      .btn-primary {
+        background-color: $primary-color;
+        border: none;
+        &:hover {
+          background-color: darken($primary-color, 10%);
+        }
+      }
+
+      .extra-options {
+        text-align: center;
+        font-size: 0.85rem;
+
+        a {
+          color: $primary-color;
+          &:hover {
+            color: darken($primary-color, 10%);
+          }
+        }
+      }
+    }
+  }
+}

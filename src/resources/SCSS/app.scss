@@ -1,6 +1,7 @@
-@import 'variable';
-@import 'header';
-@import 'footer';
-@import 'home';
-@import 'auth';
-@import 'login';
+// app.scss
+@import 'variables';
+@import 'components/header';
+@import 'components/footer';
+@import 'pages/home';
+@import 'pages/signin';
+@import 'pages/signup';

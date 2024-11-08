@@ -1,0 +1,32 @@
+.header {
+    background-color: $header-background;
+  
+    .navbar {
+      .navbar-brand {
+        .logo {
+          max-width: 150px;
+        }
+      }
+  
+      .nav-link {
+        color: $text-color;
+        font-family: $font-family-base;
+  
+        &:hover {
+          color: $primary-hover;
+        }
+      }
+  
+      .btn-primary {
+        background-color: $primary-color;
+        border-color: $primary-color;
+        color: $white-color;
+  
+        &:hover {
+          background-color: $primary-hover-dark;
+          border-color: $primary-hover-dark;
+        }
+      }
+    }
+  }
+  

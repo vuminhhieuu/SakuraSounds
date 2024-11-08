@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="/css/app.css"> <!-- Link to compiled SCSS -->
+  <title>Login - SakuraSounds</title>
+</head>
+<body>
+  <div class="container-fluid signin-container">
+    <div class="row no-gutters">
+      <!-- Left Section with Background Image -->
+      <div class="col-md-6 left-section d-flex align-items-center justify-content-center">
+        <div class="text-center">
+          <h1 class="display-4 logo-text">SakuraSounds</h1>
+          <p class="tagline">Feel the Rhythm, Love the Music</p>
+          <img src="/img/Logo.png" alt="Music" class="img-fluid logo-image">
+        </div>
+      </div>
+
+      <!-- Right Section with Signin Form -->
+      <div class="col-md-6 right-section d-flex align-items-center">
+        <div class="form-container mx-auto">
+          <h2 class="mb-4">Sign In</h2>
+          <% if (typeof error !== 'undefined') { %>
+            <div class="alert alert-danger"><%= error %></div>
+          <% } %>
+          <form action="/user/signin" method="POST">
+            <div class="form-group mb-3">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
+            </div>
+            <div class="form-group mb-3">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+              <span class="password-toggle" onclick="togglePasswordVisibility()"></span>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Sign In</button>
+          </form>
+          <div class="extra-options mt-3">
+            <p><a href="/user/forgot-password">Forgot Password?</a></p>
+            <p>Don't have an account? <a href="/user/signup">Sign Up</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function togglePasswordVisibility() {
+      const passwordInput = document.getElementById("password");
+      passwordInput.type = passwordInput.type === "password" ? "text" : "password";
+    }
+  </script>
+</body>
+</html>
+
+

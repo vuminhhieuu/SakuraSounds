@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="/css/app.css"> <!-- Link to compiled SCSS -->
+  <title>Login - SakuraSounds</title>
+</head>
+<body>
+  <div class="col-md-6 right-section d-flex align-items-center">
+  <div class="form-container mx-auto">
+    <h2 class="mb-3">Sign Up</h2>
+    <p class="mb-4">Create Your Account</p>
+    <form action="/user/signup" method="POST">
+      <div class="form-group mb-3">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="signup-name" name="username" placeholder="mhieu" required>
+      </div>
+      <div class="form-group mb-3">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="signup-email" name="email" placeholder="22520451@gm.uit.edu.vn" required>
+      </div>
+      <div class="form-group mb-3">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="signup-password" name="password" placeholder="Abc123@" required>
+        <span class="password-toggle" onclick="toggleSignupPasswordVisibility()"></span>
+      </div>
+      <button type="submit" class="btn btn-signup w-100">Sign Up</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  function toggleSignupPasswordVisibility() {
+    var passwordInput = document.getElementById("signup-password");
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+    } else {
+      passwordInput.type = "password";
+    }
+  }
+</script>
+</body>
+</html>
+

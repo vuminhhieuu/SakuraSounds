@@ -1,8 +1,16 @@
-const Path = require('../constants/paths')
+const { PathAPI } = require('../constants/paths')
+const userRoutes = require('./user.routes')
 
 const Router = app => {
-  app.use(Path.Empty, (req, res) => {
-    res.render('home')
+  //User routes
+  app.use(PathAPI.User.Base, userRoutes)
+  // Home route
+  app.use(PathAPI.Empty, async (req, res) => {
+    try {
+      res.render('pages/home', { user: req.user })
+    } catch (error) {
+      next(error)
+    }
   })
 }
 
