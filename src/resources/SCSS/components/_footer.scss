@@ -1,0 +1,25 @@
+.footer {
+    background-color: #f7cac9;
+    color: #333;
+  
+    h5 {
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+  
+    a {
+      color: #333;
+      &:hover {
+        color: #f06b6b;
+      }
+    }
+  
+    .btn-primary {
+      background-color: #f06b6b;
+      border-color: #f06b6b;
+      &:hover {
+        background-color: #e05252;
+      }
+    }
+  }
+  

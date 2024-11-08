@@ -1,15 +1,20 @@
 const USERS_MESSAGES = {
-  LOGIN: {
+  SIGNIN: {
     SUCCESS: 'Đăng nhập thành công.',
     UNAUTHORIZED: 'Email hoặc mật khẩu không đúng.',
     ACCOUNT_NOT_FOUND: 'Tài khoản không tồn tại.',
     ACCOUNT_NOT_VERIFIED: 'Tài khoản chưa xác thực.',
     ACCOUNT_LOCKED: 'Tài khoản đã bị khóa.',
   },
-  LOGOUT: {
+  SIGNOUT: {
     SUCCESS: 'Đăng xuất thành công.',
     ERROR: 'Có lỗi xảy ra trong quá trình đăng xuất.',
     NOT_LOGGED_IN: 'Bạn chưa đăng nhập.',
+  },
+  SIGNUP: {
+    SUCCESS: 'Đăng ký tài khoản thành công.',
+    EMAIL_EXISTS: 'Email đã tồn tại. Vui lòng sử dụng email khác.',
+    ACCOUNT_LOCKED: 'Tài khoản đã bị khóa.',
   },
   FORGOT_PASSWORD: {
     SUCCESS: 'Mã OTP đã được gửi đến email',
