@@ -2,8 +2,8 @@ const jwt = require('jsonwebtoken')
 const EnvVars = require('../constants/envVars')
 const JWT_SECRET = EnvVars.Jwt.Secret
 
-const generateToken = (email, password) => {
-  return jwt.sign({ email, password }, JWT_SECRET, { expiresIn: '1h' })
+const generateToken = (email, userId) => {
+  return jwt.sign({ email, userId }, JWT_SECRET, { expiresIn: '1h' })
 }
 
 const verifyToken = token => {
