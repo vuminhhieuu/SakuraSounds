@@ -30,7 +30,7 @@ class userServices {
         }
       }
 
-      const token = generateToken(email, password)
+      const token = generateToken(email, user.id)
       return {
         success: true,
         message: Messages.USERS_MESSAGES.SIGNIN.SUCCESS,
