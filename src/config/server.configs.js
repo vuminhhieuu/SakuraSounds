@@ -21,10 +21,10 @@ const limiter = rateLimit({
 const corsOptions = {
   origin: '*',
   optionsSuccessStatus: StatusCodes.OK,
-  methos: 'GET, POST, PUT, DELETE, OPTIONS',
+  methods: 'GET, POST, PUT, DELETE, OPTIONS',
   allowedHeaders:
     'Content-Type, Authorization, Origin, X-Requested-With, Accept',
-  Credentials: true,
+  credentials: true,
 }
 
 const configServer = app => {

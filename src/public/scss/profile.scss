@@ -1,0 +1,236 @@
+// Variables
+$primary-color: #007bff;
+$primary-hover: #0069d9;
+$primary-border: #0062cc;
+$text-color: #212529;
+$text-muted: #6c757d;
+$border-color: #dee2e6;
+$error-color: #dc3545;
+$success-color: #28a745;
+$bg-color: #f8f9fa;
+$shadow-color: rgba(0, 0, 0, 0.1);
+$focus-shadow: rgba(0, 123, 255, 0.25);
+
+// Mixins
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin transition($property: all) {
+    transition: $property 0.3s ease;
+}
+
+@mixin card-hover {
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px $shadow-color;
+    }
+}
+
+// Base styles
+body {
+    background-color: $bg-color;
+    min-height: 100vh;
+}
+
+// Card styles
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 20px $shadow-color;
+    @include transition;
+
+    &-body {
+        padding: 2rem;
+    }
+
+    &-title {
+        color: $text-color;
+        font-weight: 600;
+    }
+
+    &-img-top {
+        height: 200px;
+        object-fit: cover;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+}
+
+// Sidebar styles
+.list-group {
+    &-item {
+        border: none;
+        padding: 0.75rem 1rem;
+        @include transition;
+
+        &:hover {
+            background-color: lighten($primary-color, 35%);
+        }
+
+        &.active {
+            background-color: $primary-color;
+            border-color: $primary-color;
+        }
+
+        i {
+            margin-right: 0.5rem;
+        }
+    }
+}
+
+// Form styles
+.form {
+    &-control {
+        border-radius: 5px;
+        padding: 0.75rem 1rem;
+        border: 1px solid $border-color;
+        @include transition;
+
+        &:focus {
+            border-color: lighten($primary-color, 20%);
+            box-shadow: 0 0 0 0.2rem $focus-shadow;
+        }
+    }
+
+    &-label {
+        font-weight: 500;
+        color: $text-muted;
+    }
+
+    &-text {
+        color: $text-muted;
+        font-size: 0.875rem;
+    }
+}
+
+// Button styles
+.btn {
+    @include transition;
+
+    &-primary {
+        padding: 0.75rem 1rem;
+        border-radius: 5px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        background-color: $primary-color;
+        border-color: $primary-color;
+
+        &:hover {
+            background-color: $primary-hover;
+            border-color: $primary-border;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px $shadow-color;
+        }
+    }
+
+    &-outline-primary {
+        &:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px $shadow-color;
+        }
+    }
+
+    &-danger {
+        &:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba($error-color, 0.2);
+        }
+    }
+}
+
+// Playlist card styles
+.playlist-card {
+    @include card-hover;
+    cursor: pointer;
+
+    .card-body {
+        padding: 1rem;
+    }
+
+    .card-title {
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+    }
+
+    .card-text {
+        font-size: 0.875rem;
+    }
+}
+
+// Favorite song styles
+.list-group-item {
+    @include transition;
+
+    &:hover {
+        background-color: lighten($primary-color, 35%);
+    }
+
+    .btn-outline-danger {
+        opacity: 0;
+        @include transition;
+    }
+
+    &:hover .btn-outline-danger {
+        opacity: 1;
+    }
+}
+
+// Modal styles
+.modal {
+    &-content {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 0 20px $shadow-color;
+    }
+
+    &-header {
+        border-bottom: 1px solid $border-color;
+        padding: 1.5rem;
+    }
+
+    &-body {
+        padding: 1.5rem;
+    }
+
+    &-footer {
+        border-top: 1px solid $border-color;
+        padding: 1.5rem;
+    }
+}
+
+// Avatar styles
+.avatar {
+    &-preview {
+        border: 2px solid $border-color;
+        @include transition;
+
+        &:hover {
+            border-color: $primary-color;
+        }
+    }
+}
+
+// Alert styles
+.alert {
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 20px $shadow-color;
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+    .card-body {
+        padding: 1.5rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .list-group-item {
+        padding: 0.5rem 0.75rem;
+    }
+} 

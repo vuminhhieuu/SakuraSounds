@@ -5,6 +5,6 @@ const HOST = EnvVars.Host
 
 // Start the server
 server.listen(PORT, () => {
-  console.log(`App is listening on ${HOST}:${PORT}`)
-  console.log(`API documentation is available at ${HOST}:${PORT}/api-docs`)
+  console.log(`App is listening on http://${HOST}:${PORT}`)
+  console.log(`API documentation is available at http://${HOST}:${PORT}/api-docs`)
 })

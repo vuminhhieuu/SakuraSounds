@@ -1,8 +1,8 @@
 const express = require('express')
 const databaseConnect = require('./config/database.configs')
 const serverConfig = require('./config/server.configs')
-const routerConfig = require('./routes/index.routes')
-const ErrorHandler = require('./middlewares/errorHandler.middlewares')
+const mainRouter = require('./routes/index.routes')
+const ErrorHandler = require('./middlewares/errorHandler.middleware')
 
 const app = express()
 
@@ -13,7 +13,7 @@ serverConfig(app)
 databaseConnect()
 
 // Router configuration
-routerConfig(app)
+app.use(mainRouter)
 
 // Error handler
 app.use(ErrorHandler)
